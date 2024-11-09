@@ -1,14 +1,70 @@
-.character-card {
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .character-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }  
+/* Estilos del header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+.header .logo {
+  height: 50px;
+}
+
+.header nav {
+  display: flex;
+  gap: 20px;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.support-button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilos de la lista de personajes */
+.characters-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  background-color: #222;
+  padding: 20px;
+}
+
+.character-item {
+  background-color: #333;
+  color: #fff;
+  width: 200px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.character-item h3 {
+  color: #FFD700;
+}
+
+.character-item p {
+  margin: 5px 0;
+}
+
+.character-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.character-item ul {
+  list-style-type: none;
+  padding: 0;
+}

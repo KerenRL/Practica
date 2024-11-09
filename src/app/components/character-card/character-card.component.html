@@ -1,4 +1,27 @@
-<div class="character-card">
+<div class="header">
+  <img src="assets/logo.jpg" alt="Dragon Ball API Logo" class="logo">
+  <nav>
+    <a href="#">Docs</a>
+    <a href="#">About</a>
+    <button class="support-button">Support Us</button>
+  </nav>
+</div>
+
+<div class="characters-list">
+  <div *ngFor="let character of characters" class="character-item">
+    <img [src]="character.image" alt="{{ character.name }}" class="character-image">
     <h3>{{ character.name }}</h3>
-    <img [src]="character.image" alt="{{ character.name }}" class="character-image" />
-  </div>  
+    <p><strong>{{ character.race }} - {{ character.gender }}</strong></p>
+    <p><strong>Base KI:</strong> {{ character.base_ki }}</p>
+    <p><strong>Total KI:</strong> {{ character.total_ki }}</p>
+    <p><strong>Affiliation:</strong> Z Fighter</p>
+    <div *ngIf="character.transformations && character.transformations.length > 0">
+      <h4>Transformaciones:</h4>
+      <ul>
+        <li *ngFor="let transformation of character.transformations">
+          {{ transformation.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
